@@ -1,5 +1,8 @@
-from ppb import BaseScene
-from ppb import GameEngine
+from ppb import GameEngine, BaseScene
 
-with GameEngine(BaseScene) as engine:
-    engine.run()
+class Game(BaseScene):
+
+    def __init__(self, engine, background_color=(0, 0, 0), **kwargs):
+        super().__init__(engine=engine, 
+                         background_color=background_color,
+                         **kwargs)
